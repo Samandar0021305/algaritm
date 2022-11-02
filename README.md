@@ -298,11 +298,111 @@ function countPositivesSumNegatives(input) {
     let summa = 0
     for(let index of arrayTwo){
 summa +=index;
-    }
-    
+    }  
     return [arrayOne.length,summa]
-  }
+  }  
+}
+
+
+solution 14 
+
+Given an array of integers, return a new array with each value doubled.
+
+For example:
+
+[1, 2, 3] --> [2, 4, 6]
+
+
+
+function maps(x){
+ let k = []
+  for(let item of x){
+   k.push(item*2)
+   
+ }
+  return k
+  
+}
+
+solution 15 
+
+You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+
+Complete the method which accepts such an array, and returns that single different number.
+
+The input array will always be valid! (odd-length >= 3)
+
+
+function stray(numbers) {
+  let m = []
+let f = numbers[0]
+  for(let i = 0; i<numbers.length; i++){
+   if(numbers[0] != numbers[i] ){
+     m.push(numbers[i])
+   }
+  } 
+
+   if(m.length >= 2){
+  return f
+   }else{
+    return m[0]
+   }
   
   
 }
 
+
+solution 16
+
+Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+
+Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+
+function paperwork(n, m) {
+ if(n <= 0 || m <=0 ){
+   return 0
+ } else{
+   return n*m
+ }
+}
+
+
+solution 17
+
+You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+
+function likes(names) {
+  if(names.length == 0){
+    return 'no one likes this'
+  }else if(names.length == 1){
+  return `${names[0]} likes this`
+  }else if(names.length == 2){
+    return `${names[0]} and ${names[1]} like this`
+  }else if(names.length == 3){
+  return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  }else if(names.length >= 4){
+    let k = names.length - 2;
+    return `${names[0]}, ${names[1]} and ${k} others like this`
+  }
+}
+
+solution 18
+
+Create a function which answers the question "Are you playing banjo?".
+If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+The function takes a name as its only argument, and returns one of the following strings:
+
+function areYouPlayingBanjo(name) {
+   let array = name.split("")
+   if(array[0].toLowerCase() == 'r'){
+return `${name} plays banjo`
+   }else{
+ return `${name} does not play banjo`
+   }
+
+}
