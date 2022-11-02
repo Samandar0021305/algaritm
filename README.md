@@ -1,6 +1,7 @@
 # algaritm
 solution 1 
 Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+
 function domainName(url){
   url = url.replace("https://", '');
   url = url.replace("http://", '');
@@ -14,6 +15,7 @@ Your task is to sort a given string. Each word in the string will contain a sing
 Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
 
 If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+
 function order(words){
  if(words == ""){
     return ""
