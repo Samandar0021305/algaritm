@@ -406,3 +406,142 @@ return `${name} plays banjo`
    }
 
 }
+
+
+
+solution 19
+
+Create a function called _if which takes 3 arguments: a boolean value bool and 2 functions (which do not take any parameters): func1 and func2
+
+When bool is truth-ish, func1 should be called, otherwise call the func2.
+
+function _if(bool, func1, func2) { 
+  if(bool){
+    return  func1(true)
+  }else{
+  return func2(false)
+  }
+}
+
+
+
+
+solution 20
+iven a list of integers, determine whether the sum of its elements is odd or even.
+
+Give your answer as a string matching "odd" or "even".
+
+If the input array is empty consider it as: [0] (array with a zero).
+
+Examples:
+
+function oddOrEven(array) {
+   //enter code here
+  let sum = 0
+   for(let item of array){
+     sum +=item
+   }
+   if(sum % 2 ==0 ){
+     return 'even'
+   }else if(sum % 2 !==0){
+     return 'odd'
+   }else if(array.length == 0){
+     return 'even'
+   }else if(sum == 0){
+    return 'even'
+   }
+}
+
+solution 21
+
+This function should test if the factor is a factor of base.
+
+Return true if it is a factor or false if it is not.
+
+About factors
+Factors are numbers you can multiply together to get another number.
+
+2 and 3 are factors of 6 because: 2 * 3 = 6
+
+You can find a factor by dividing numbers. If the remainder is 0 then the number is a factor.
+You can use the mod operator (%) in most languages to check for a remainder
+For example 2 is not a factor of 7 because: 7 % 2 = 1
+
+Note: base is a non-negative number, factor is a positive number.
+
+
+function checkForFactor (base, factor) {
+  // code here
+  if(base % factor == 0){
+    return true
+  }else{
+    return false
+  }
+}
+
+
+solution 22
+
+Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+
+Note: a and b are not ordered!
+
+Examples (a, b) --> output (explanation)
+
+function getSum( a,b )
+{
+   if(a == b){
+     return a
+   }else if(b > a){
+     let sum = 0;
+     for(let i = a ; i <= b;i++){
+       sum+=i;
+     }
+     return sum
+   }else if(a>b){
+      let sum = 0;
+     for(let i = b ; i <= a;i++){
+       sum+=i;
+     }
+     return sum
+   }
+}
+
+
+
+solution 23
+
+
+In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+function filter_list(l) {
+  // Return a new array with the strings filtered out
+ let results = []
+    for(let item of l){
+       if(typeof item === 'number'){
+         results.push(item)
+       }
+    }
+    return results
+}
+
+
+
+solution 24
+Complete the solution so that the function will break up camel casing, using a space between words.
+
+// complete the function
+function solution(string) {
+   let arry = string.split("")
+     let newArry = []
+     for(let item of arry){
+        if(item.toUpperCase() == item){
+          newArry.push(" ", item)
+        }else{
+            newArry.push(item)
+        }
+     }
+    return newArry.join("")
+}
+
+
