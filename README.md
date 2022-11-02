@@ -59,7 +59,8 @@ Given the a list of numbers, return a fixed list so that the values increment by
 
 function pipeFix(numbers){
   let k = []
-  for(let i= numbers[0];i<=numbers[numbers.length - 1];i++){
+  for(let i= numbers[0];
+  i<=numbers[numbers.length - 1];i++){
     k.push(i)
   }
   return k
